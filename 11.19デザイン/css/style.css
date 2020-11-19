@@ -1,0 +1,221 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 8px;
+    line-height: 1.5;
+}
+
+li {
+    list-style: none;
+}
+
+.color-font {
+    color: #7f6666;
+}
+
+/* botton */
+
+.btn-top {
+    position: fixed;
+    z-index: 999;
+    font-size: 20px;
+    bottom: 10%;
+    right: 5%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: auto;
+}
+
+.btn-span a {
+    text-decoration: none;
+    color: black;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.h-logo {
+    float: left;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.h-menu {
+    float: right;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.h-list {
+    display: inline-block;
+    padding: 10px 24px;
+}
+
+.h-a {
+    text-decoration: none;
+    color: black;
+}
+
+.h-a:hover {
+    color: #ff0;
+    transition: 0.3s;
+}
+
+/* main */
+
+main {
+    clear: both;
+    margin: 0 auto;
+}
+
+.m-visual {
+    background-image: url(../img/image1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+
+.m-v-contents {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 20%;
+    transform: translate(-40%, -50%);
+    text-shadow: 0px 0px 5px #ffffff,
+    0px 0px 10px #000000,
+    0px 0px 20px #aaaaaa,
+    0px 0px 40px #aaaaaa,
+    0px 0px 60px #aaaaaa,
+    0px 0px 80px #eeeeee,
+    0px 0px 100px #eeeeee,
+    0px 0px 120px #eeeeee;
+}
+
+.m-title {
+    font-size: 45px;
+    font-weight: normal;
+    padding: 15px;
+}
+
+.m-content {
+    padding: 15px;
+}
+
+/* container */
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+section {
+    display: flex;
+    margin-bottom: 150px;
+}
+
+.container section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.container section:nth-child(odd) .content {
+    padding-left: 45px;
+}
+
+.container section:nth-child(even) .content {
+    padding-right: 45px;
+}
+
+.m-h2 {
+    font-size: 30px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.t-icon {
+    border-radius: 50%;
+}
+
+.skill-icons {
+    width: 60%;
+}
+
+.s-icon {
+    width: 30%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.w-contents {
+    width: 50%;
+}
+
+.work {
+    width: 40%;
+    height: 250px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+/* form */
+
+.contact {
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid #999999;
+}
+
+.next-u {
+    width: auto;
+    padding: 5px 18px;
+    border-radius: 10px;
+    border-bottom: solid 2px #041c50;
+}
+
+.next-u:active {
+    transform: translateY(2px);
+    border-bottom: none;
+    margin-top: 12px;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    overflow: hidden;
+    background: rgb(226, 215, 211);
+    padding: 20px 0;
+    margin-top: 100px;
+}
+
+.footer-right {
+    float: right;
+    margin-right: 30px;
+}
+
+.f-p {
+    font-size: 13px;
+    color: #999999;
+}
