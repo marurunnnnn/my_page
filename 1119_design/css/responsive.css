@@ -1,0 +1,186 @@
+/* max-width: 1250px; */
+
+@media screen and (max-width: 1250px) {
+    .t-icon {
+        display: none;
+    }
+
+    .container {
+        padding: 3%;
+    }
+
+    .skill-icons {
+        display: none;
+    }
+
+    .w-contents {
+        display: none;
+    }
+
+    .container section:nth-child(odd) .content {
+        padding-left: 0;
+    }
+
+    .container section:nth-child(even) {
+        flex-direction: none;
+    }
+
+    .container section:nth-child(odd) .content {
+        padding-left: 0;
+    }
+
+    .container section:nth-child(even) .content {
+        padding-right: 0;
+    }
+    
+    .sp-t-icon {
+        display: block;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    .content p {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .m-p-str {
+        font-size: 20px;
+    }
+
+    .sp-skill-icon {
+        display: block;
+        width: 100%;
+        text-align: center
+    }
+
+    .sp-skill-icon .s-icon {
+        width: 15%;
+    }
+
+    .sp-w-contents {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .sp-w-contents a {
+        text-decoration: none;
+    }
+
+    .sp-w-contents .work {
+        width: calc(100%/5);
+        height: 100%;
+    }
+}
+
+/* max-width: 1024px; iPad Pro -size */
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    .h-nav {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        height: 100px;
+    }
+    
+    .h-logo {
+        float: none;
+        position: absolute;
+        margin: 0px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .m-v-contents {
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    .btn-top {
+        display: block;
+        position: fixed;
+        z-index: 999;
+        font-size: 20px;
+        bottom: 10%;
+        right: 5%;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        padding: auto;
+        cursor: pointer;
+    }
+}
+
+/* max-width: 540px; surface duo*/
+
+@media screen and (max-width: 540px) {
+    .h-logo {
+        width: 80%;
+    }
+
+    .m-v-img {
+        position: relative;
+    }
+
+    .m-title {
+        font-size: 25px;
+    }
+
+    .m-content {
+        font-size: 13px;
+    }
+
+    .m-v-contents {
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    .sp-t-icon {
+        width: 50%;
+    }
+}
+
+/* max-width: 414px; iPhone + */
+
+@media screen and (max-width: 414px) {
+    header {
+        height: 80px;
+    }
+
+    .m-v-contents {
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .m-title {
+        font-size: 25px;
+        padding: 5px 0;
+    }
+
+    .m-content {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+
+    .sp-w-contents {
+        height: 90px;
+    }
+}
