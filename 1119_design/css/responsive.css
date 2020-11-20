@@ -119,6 +119,7 @@
         border-radius: 50%;
         padding: auto;
         cursor: pointer;
+        background-color: white;
     }
 }
 
