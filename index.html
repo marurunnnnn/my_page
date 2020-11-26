@@ -9,36 +9,30 @@
     <link rel="stylesheet" href="1119_design/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
     <link rel="stylesheet" href="1119_design/css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <button class="btn-top">
-        <span class="btn-span">
-            <a href="#top">
-                top
-            </a>
-        </span>
-    </button>
     <header id="top">
         <img class="h-logo" src="1119_design/img/my-logo.png" alt="title-logo">
         <nav class="h-nav">
             <ul class="h-menu">
                 <li class="h-list">
-                    <a class="h-a" href="#about">
+                    <a class="h-a" href="#about" id="n-about">
                         about
                     </a>
                 </li>
                 <li class="h-list">
-                    <a class="h-a" href="#skill">
+                    <a class="h-a" href="#skill" id="n-skull">
                         skill
                     </a>
                 </li>
                 <li class="h-list">
-                    <a class="h-a" href="#works">
+                    <a class="h-a" href="#works" id="n-works">
                         works
                     </a>
                 </li>
                 <li class="h-list">
-                    <a class="h-a" href="#contact">
+                    <a class="h-a" href="#contact" id="n-contact">
                         contact
                     </a>
                 </li>
@@ -178,5 +172,26 @@
             </p>
         </div>
     </footer>
+    <p id="pagetop">
+        <a href="#">
+            TOP
+        </a>
+    </p>
 </body>
+<script>
+    $(function(){
+        $(window).scroll(function(){
+            if($(this).scrollTop() > 400){
+                $("#pagetop").fadeIn();
+            }else{
+                $("#pagetop").fadeOut();
+            }
+        });
+        $("#pagetop").on("click",function(){
+            $("body,html").animate({
+                scrollTop:0
+            },500);
+        });
+    });
+</script>
 </html>

@@ -15,21 +15,6 @@ li {
     color: #7f6666;
 }
 
-/* botton */
-
-.btn-top {
-    display: none;
-}
-
-.btn-top:hover {
-    background-color: #999999;
-}
-
-.btn-span a {
-    text-decoration: none;
-    color: black;
-}
-
 /* header */
 
 header {
@@ -227,6 +212,29 @@ footer {
 .f-p {
     font-size: 13px;
     color: #999999;
+}
+
+/* pagetop */
+
+#pagetop {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    font-size: 16px;
+}
+#pagetop a {
+    background-color: #666666;
+    text-decoration: none;
+    color: #ffffff;
+    width: 50px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#pagetop a:hover {
+    text-decoration: none;
+    background-color: #999999;
 }
 
 /* sp-media */
