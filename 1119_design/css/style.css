@@ -169,29 +169,8 @@ section {
     margin: 0 auto;
 }
 
-form {
-    width: 100%;
-}
-
-form input, form textarea {
-    width: 80%;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    border: 1px solid #999999;
-}
-
-.next-u {
-    width: auto;
-    padding: 5px 18px;
-    border-radius: 10px;
-    border-bottom: solid 2px #041c50;
-}
-
-.next-u:active {
-    transform: translateY(2px);
-    border-bottom: none;
-    margin-top: 12px;
+.c-content {
+    width: 40%;
 }
 
 /* footer */
@@ -249,4 +228,14 @@ footer {
 
 .sp-w-contents {
     display: none;
+}
+
+.btn {
+    border: 1.5px solid #000000;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.last-p {
+    padding-bottom: 10px;
 }
