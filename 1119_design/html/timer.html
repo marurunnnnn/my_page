@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイマー</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 必ずjQueryを使用するときは忘れないように -->
+    <style>
+        #main{
+            width: 300px;
+            height: 100px;
+            margin: 20px;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        #timer{
+            width: 200px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            margin: 0 50px;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: bold;
+            background-color: #f0ddd4;
+            text-align: center;
+        }
+        form{
+            position: absolute;
+            top: 60px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        タイマー
+    </h1>
+    <br>
+    <div id="main">
+        <div id="timer">
+            00:00:00
+        </div>
+        <form>
+            <input type="button" value="start" id="start">
+            <input type="button" value="stop" id="stop" disabled="disabled">        <!-- disabled：押せないようにする処理 -->
+            <input type="button" value="restart" id="restart" disabled="disabled">
+            <input type="button" value="reset" id="reset" disabled="disabled">
+        </form>
+    </div>
+</body>
+<script>
+    $(function(){
+        //変数の宣言
+        var sec = 0;
+        var min = 0;
+        var hour = 0;
+        var time;
+        //.prop(name,value) 指定した属性(name)に値(value)を付与したりする。
+        //this最初に指定したclassやid →$("#start")
+        function countup(){
+            sec += 1;
+            if(sec > 59){   //秒の計算　分に変わるかどうか
+                sec = 0;
+                min += 1;
+            }
+            if(min > 59){   //分の計算　時間に変わるかどうか
+                min = 0;
+                hour += 1;
+            }
+            //0埋め
+            sec_num = ("0" + sec).slice(-2);    //7秒だった場合　「07」でslice: -2;で「07」の取得　30秒だった場合　「030」でslice: -2;で「30」の取得
+            min_num = ("0" + min).slice(-2);    //同上
+            hour_num = ("0" + hour).slice(-2);
+            $("#timer").html(hour_num + ":" + min_num + ":" + sec_num);
+        }
+        //スタートボタン
+        $("#start").on("click",function(){
+            sec = 0;
+            min = 0;
+            hour = 0;
+            $("#timer").html("00:00:00");
+            //作った関数countupを使って1000ミリ秒ごとに行い「time」に入れてあげる。
+            time = setInterval(countup,1000);
+            //このthisは#start　disabledをtureにしますよという処理。
+            $(this).prop("disabled",true);
+            //disabledを指定IDから無く(remove)しますよという処理。
+            $("#stop,#reset").removeAttr("disabled");
+        });
+        //ストップボタン
+        $("#stop").on("click",function(){
+            //一時停止
+            clearInterval(time);
+            $(this).prop("disabled",true);
+            $("#restart").removeAttr("disabled")
+            //disabledを指定IDから無く(remove)しますよという処理。
+        });
+        //リスタート処理
+        $("#restart").on("click",function(){
+            time = setInterval(countup,1000);
+            $(this).prop("disabled",true);
+            //指定IDにdisabledを有効化
+            $("#stop").removeAttr("disabled");
+            //disabledを指定IDから無く(remove)しますよという処理。
+        });
+        //リセット処理
+        $("#reset").on("click",function(){
+            sec = 0;    //値の初期化
+            min = 0;    //値の初期化
+            hour = 0;   //値の初期化
+            $("#timer").html("00:00:00");
+            //#timer のhtmlを「00：00：00：」にする。
+            clearInterval(time);
+            //タイマーの停止
+            $("#stop,#reset,#restart").prop("disabled",true);
+            //指定IDにdisabledを有効化
+            $("#start").removeAttr("disabled");
+            //disabledを指定IDから無く(remove)しますよという処理。
+        });
+    });
+</script>
+</html>

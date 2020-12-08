@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 必ずjQueryを使用するときは忘れないように -->
+</head>
+<style>
+    #main {
+        width: 240px;
+        height: 400px;
+        margin: 20px;
+        border: 1px solid #000000;
+    }
+    #display {
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 100px;
+        border-bottom: 1px solid #555555;
+    }
+    #keisan {
+        overflow: hidden;
+    }
+    #plus, #minus {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        float: left;
+        margin: 20px;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #plus {
+        background-color: #b84986;
+    }
+    #minus {
+        background-color: #fabdc4;
+    }
+    #reset {
+        float: left;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #a9f5f2;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 0 20px;
+    }
+</style>
+<body>
+    <h1>
+        カウンター
+    </h1>
+    <br>
+    <div id="main">
+        <div id="display">
+            0
+        </div>
+        <div id="keisan">
+            <div id="plus">
+                +
+            </div>
+            <div id="minus">
+                -
+            </div>
+            <div id="reset">
+                reset
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+        var count = 0;
+        //+が押されたときの処理
+        $("#plus").on("click",function(){
+            count += 1;
+            console.log(count);
+            display(); //displayに反映してあげる。
+        });
+        //-が押されたときの処理
+        $("#minus").on("click",function(){
+            count -= 1;
+            console.log(count);
+            display();//displayに反映してあげる。
+        });
+        //resetが押されたときの処理
+        $("#reset").on("click",function(){
+            count = 0;
+            console.log(count);
+            display();//displayに反映してあげる。
+        });
+        //displayに反映。
+        function display(){
+            $("#display").text(count);
+        }
+    });
+</script>
+</html>
