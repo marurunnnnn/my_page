@@ -1,0 +1,24 @@
+@media screen and (max-width:415px) {
+    .sp-t-icon {
+        display: none;
+    }
+    
+    .sp-skill-icon {
+        display: none;
+    }
+    
+    .sp-w-contents {
+        display: none;
+    }
+    
+    .btn {
+        border: 1.5px solid #000000;
+        border-radius: 5px;
+        width: 100px;
+    }
+    
+    .last-p {
+        padding-bottom: 10px;
+    }
+    
+}

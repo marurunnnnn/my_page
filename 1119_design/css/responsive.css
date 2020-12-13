@@ -9,6 +9,10 @@
         padding: 3%;
     }
 
+    .content {
+        width: auto;
+    }
+
     .skill-icons {
         display: none;
     }
@@ -69,8 +73,8 @@
     }
 
     .sp-w-contents .work {
-        width: calc(100%/5);
-        height: 100%;
+        width: 25%;
+        height: 300px;
     }
 }
 
@@ -138,11 +142,16 @@
     .sp-t-icon {
         width: 50%;
     }
+
+    .sp-w-contents .work {
+        width: 25%;
+        height: 150px;
+    }
 }
 
 /* max-width: 414px; iPhone + */
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 416px) {
     header {
         height: 80px;
     }
@@ -164,9 +173,5 @@
     .m-content {
         font-size: 13px;
         padding: 10px 0;
-    }
-
-    .sp-w-contents {
-        height: 90px;
     }
 }
