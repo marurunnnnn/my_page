@@ -169,6 +169,7 @@ form {
 }
 
 input,textarea {
+    resize: none;
     width: 80%;
     margin: 6px;
 }
@@ -185,6 +186,7 @@ textarea {
 
 .next-u {
     width: 20%;
+    height: 40px;
 }
 
 /* footer */
