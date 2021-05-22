@@ -160,7 +160,8 @@ section {
 
 /* form */
 form {
-    text-align: center;
+    /* text-align: center; */
+    margin: 0 20px;
 }
 
 .contact {
@@ -168,26 +169,31 @@ form {
     margin: 0 auto;
 }
 
-input,textarea {
+/* input,textarea {
     resize: none;
     width: 80%;
     margin: 6px;
-}
+} */
 
 input {
     height: 30px;
     font-size: 15px;
 }
 
-textarea {
+/* textarea {
     resize: none;
     height: 200px;
     font-size: 18px;
-}
+} */
 
-.next-u {
+/* .next-u {
     width: 20%;
     height: 40px;
+} */
+
+.mailto {
+    text-align: left;
+    width: 20%;
 }
 
 /* footer */
