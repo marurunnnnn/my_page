@@ -262,3 +262,18 @@ footer {
 .last-p {
     padding-bottom: 10px;
 }
+
+.level {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+}
+
+.level h2 {
+    width: 20%;
+    display: inline-block;
+}
+
+.level img {
+    display: inline-block;
+}
