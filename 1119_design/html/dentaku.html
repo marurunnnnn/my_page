@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span class="tmp-number"></span><br>
+        <input type="text" lass="text-display" value="0" style="text-align: right;" readonly=true>
+    </div>
+    <table>
+        <tr>
+            <td><button type="button" class="btn-number" data-val="7">7</button></td>
+            <td><button type="button" class="btn-number" data-val="8">8</button></td>
+            <td><button type="button" class="btn-number" data-val="9">9</button></td>
+            <td><button type="button" class="btn-number" data-val="÷">÷</button></td>
+        </tr>
+        <br>
+        <tr>
+            <td><button type="button" class="btn-number" data-val="7">4</button></td>
+            <td><button type="button" class="btn-number" data-val="8">5</button></td>
+            <td><button type="button" class="btn-number" data-val="9">6</button></td>
+            <td><button type="button" class="btn-number" data-val="×">×</button></td>
+        </tr>
+        <br>
+        <tr>
+            <td><button type="button" class="btn-number" data-val="3">3</button></td>
+            <td><button type="button" class="btn-number" data-val="2">2</button></td>
+            <td><button type="button" class="btn-number" data-val="1">1</button></td>
+            <td><button type="button" class="btn-number" data-val="-">-</button></td>
+        </tr>
+        <br>
+        <tr>
+            <td><button type="button" class="btn-number" data-val="3">0</button></td>
+            <td><button type="button" class="btn-other" data-val=".">.</button></td>
+            <td><button type="button" class="btn-other" data-val="=">=</button></td>
+            <td><button type="button" class="btn-other" data-val="+">+</button></td>
+        </tr>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var disp_number = 0;
+        var number = 0;
+
+        //数字ボタンのクリックログ
+        $('.btn-number').click(function(){
+            var val = $(this).attr('data-val');
+            console.log("押された数字は" + val + "です。");
+            //押された数字の保存領域
+            tmp_number = parseInt(val,10);
+        });
+        //記号ボタンのクリックログ
+        $(".btn-other").click(function(){
+            var val = $(this).attr("data-val");
+            if(val == "="){
+                console.log("=です。");
+                //ディスプレイへ数字を示
+                $(".text-display").val(disp_number);
+                $(".tmp_display").html();
+            }else if(val == "+"){
+                console.log("+です");
+                $(".tmp_display").html(disp_number + " + " + tmp_number);
+                disp_number = disp_number + tmp_number;
+            }else if(val == "-"){
+                console.log("-です");
+                $(".tmp_display").html(disp_number + " - " + tmp_number);
+                disp_number = disp_number - tmp_number;
+            }else if(val == "×"){
+                console.log("×です");
+                $(".tmp_display").html(disp_number + " × " + tmp_number);
+                disp_number = disp_number * tmp_number;
+            }else if(val == "÷"){
+                console.log("÷です");
+                $(".tmp_display").html(disp_number + " ÷ " + tmp_number);
+                disp_number = disp_number / tmp_number;
+            }else if(val == "."){
+                console.log(".です。");
+            }
+            $("text-display").val(disp_number);
+            console.log("押された記号は" + val + "です。");
+        });
+    </script>
+</body>
+</html>
